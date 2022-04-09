@@ -4,9 +4,7 @@
              x:Class="MvvmApp.Views.SettingsPage">
     <ContentPage.Content>
         <StackLayout>
-            <Label Text="Hello Settings!"/>
-
-            <Label Text="Welcome to Xamarin.Forms!"
+            <Label Text="{Binding Location}"
                 VerticalOptions="CenterAndExpand" 
                 HorizontalOptions="CenterAndExpand" />
         </StackLayout>
