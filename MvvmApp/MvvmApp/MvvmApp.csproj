@@ -17,7 +17,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <EmbeddedResource Update="Views\SettingsPage.xaml">
+    <EmbeddedResource Update="Views\EpisodesPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
   </ItemGroup>
@@ -26,5 +26,21 @@
     <None Update="Views\SettingsPage.xaml">
       <Generator>MSBuild:Compile</Generator>
     </None>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Models\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="Views\CharactersPage.xaml.cs">
+      <DependentUpon>CharactersPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Views\LocationsPage.xaml.cs">
+      <DependentUpon>LocationsPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Views\EpisodesPage.xaml.cs">
+      <DependentUpon>EpisodesPage.xaml</DependentUpon>
+    </Compile>
   </ItemGroup>
 </Project>

@@ -10,9 +10,9 @@ using Xamarin.Forms.Xaml;
 namespace MvvmApp.Views
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class SettingsPage : ContentPage
+    public partial class EpisodesPage : ContentPage
     {
-        public SettingsPage()
+        public EpisodesPage()
         {
             InitializeComponent();
         }
