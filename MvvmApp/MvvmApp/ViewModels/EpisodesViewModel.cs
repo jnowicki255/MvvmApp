@@ -1,13 +1,15 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-using System.Threading.Tasks;
-using Xamarin.Essentials;
-
-namespace MvvmApp.ViewModels
+﻿namespace MvvmApp.ViewModels
 {
     public class EpisodesViewModel : BaseViewModel
     {
+        public override void OnNavigatedTo()
+        {
+            base.OnNavigatedTo();
+        }
 
+        public override void OnNavigatedFrom()
+        {
+            base.OnNavigatedFrom();
+        }
     }
 }

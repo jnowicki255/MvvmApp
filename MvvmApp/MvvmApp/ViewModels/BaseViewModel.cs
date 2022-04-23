@@ -1,14 +1,15 @@
-﻿using MvvmApp.Services;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
+using System.Net.Http;
 using System.Runtime.CompilerServices;
-using Xamarin.Forms;
 
 namespace MvvmApp.ViewModels
 {
     public class BaseViewModel : INotifyPropertyChanged
     {
+        protected HttpClient apiClient = new HttpClient();
+
         bool isBusy = false;
         public bool IsBusy
         {
@@ -22,6 +23,10 @@ namespace MvvmApp.ViewModels
             get { return title; }
             set { SetProperty(ref title, value); }
         }
+
+        public virtual void OnNavigatedTo() { }
+
+        public virtual void OnNavigatedFrom() { }
 
         protected bool SetProperty<T>(ref T backingStore, T value,
             [CallerMemberName] string propertyName = "",

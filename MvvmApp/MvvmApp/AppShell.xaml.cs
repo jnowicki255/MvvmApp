@@ -1,7 +1,5 @@
 ﻿using MvvmApp.ViewModels;
-using MvvmApp.Views;
 using System;
-using System.Collections.Generic;
 using Xamarin.Forms;
 
 namespace MvvmApp
@@ -11,6 +9,22 @@ namespace MvvmApp
         public AppShell()
         {
             InitializeComponent();
+            this.Navigated += OnNavigated;
+            this.Navigating += OnNavigating;
+        }
+
+        private void OnNavigating(object sender, ShellNavigatingEventArgs e)
+        {
+            var context = Shell.Current.CurrentPage.BindingContext;
+            var viewModel = context != null ? context as BaseViewModel : null;
+            viewModel?.OnNavigatedFrom();
+        }
+
+        private void OnNavigated(object sender, ShellNavigatedEventArgs e)
+        {
+            var context = Shell.Current.CurrentPage.BindingContext;
+            var viewModel = context != null ? context as BaseViewModel : null;
+            viewModel?.OnNavigatedTo();
         }
 
         private async void OnMenuItemClicked(object sender, EventArgs e)

@@ -1,7 +1,5 @@
-﻿using System;
-using System.ComponentModel;
+﻿using MvvmApp.ViewModels;
 using Xamarin.Forms;
-using Xamarin.Forms.Xaml;
 
 namespace MvvmApp.Views
 {
@@ -10,6 +8,7 @@ namespace MvvmApp.Views
         public CharactersPage()
         {
             InitializeComponent();
+            BindingContext = new CharactersViewModel();
         }
     }
 }

@@ -1,8 +1,4 @@
-﻿using MvvmApp.Services;
-using MvvmApp.Views;
-using System;
-using Xamarin.Forms;
-using Xamarin.Forms.Xaml;
+﻿using Xamarin.Forms;
 
 namespace MvvmApp
 {
@@ -17,7 +13,7 @@ namespace MvvmApp
 
         protected override void OnStart()
         {
-            Shell.Current.GoToAsync("//LoginPage").Wait();
+            //Shell.Current.GoToAsync("//LoginPage").Wait();
         }
 
         protected override void OnSleep()
